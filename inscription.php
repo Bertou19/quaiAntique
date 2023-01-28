@@ -111,7 +111,7 @@ include_once "includes/navbar.php";
 <div class="container-fluid">
   <div class="row justify-content-center">
 
-    <h1 class="connexion-title text-center pt-5">M'inscrire</h1>
+    <h1 class="inscription-title text-center pt-5">M'inscrire</h1>
     <div class="text-center">
       <?php
       if (isset($_SESSION["success"])) {

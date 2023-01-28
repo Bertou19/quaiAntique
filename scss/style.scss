@@ -242,6 +242,13 @@ h1,p{
 
 /*CONNEXION*/
 
+.connexion-title, .inscription-title{
+
+  font-family: "Lora-SemiBoldItalic";
+color: #9B6A6C;
+}
+
+
 .connexion-title::before, .connexion-title::after{
    
   content:"";

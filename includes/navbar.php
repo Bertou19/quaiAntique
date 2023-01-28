@@ -27,53 +27,44 @@
             <li <?php if ($nav_en_cours == 'CarteEtMenus') {
                   echo 'id = "en_cours"';
                 } ?> class="nav-item">
-              <a href="../carteEtMenus.php" class="nav-link text-info ">Carte et menus</a>
+              <a href="carteEtMenus.php" class="nav-link text-info ">Carte et menus</a>
             </li>
-            <?php if (isset($_SESSION["admin"])) : ?>
-              <li <?php if ($nav_en_cours == '') {
-                    echo 'id = "en_cours"';
-                  } ?> class="nav-item">
-                <a href="/admin/ajoutPatients.php" class="nav-link text-info">Gestion des cartes et menus</a>
-              </li>
-              <li <?php if ($nav_en_cours == 'galerie') {
-                    echo 'id = "en_cours"';
-                  } ?> class="nav-item">
-                <a href="/admin/gestionGalerie.php" class="nav-link text-info">Gestion de la galerie</a>
-              </li>
-            <?php endif; ?>
-            <li <?php if ($nav_en_cours == 'Reservation') {
+            <li <?php if ($nav_en_cours == 'horaires') {
                   echo 'id = "en_cours"';
                 } ?> class="nav-item">
-              <a href="../reservation.php" class="nav-link text-info ">Réserver</a>
+              <a href="horaires.php" class="nav-link text-info ">Nos horaires</a>
             </li>
-            <?php if (isset($_SESSION["user"])) : ?>
-              <li class="nav-item" <?php if ($nav_en_cours == 'deconnexion') {
-                                      echo 'id = "en_cours"';
-                                    } ?>>
-                <a href="deconnexion.php" class="nav-link ">Se deconnecter</a>
+            <?php if (isset($_SESSION["admin"])) : ?>
+              <li <?php if ($nav_en_cours == 'profilAdmin') {
+                    echo 'id = "en_cours"';
+                  } ?> class="nav-item">
+                <a href="profilAdmin.php" class="nav-link ">Compte admin</a>
               </li>
-            <?php endif; ?>
-            <?php if (!isset($_SESSION["user"])) : ?>
+
+            <?php else : ?>
+
               <li <?php if ($nav_en_cours == 'Contact') {
                     echo 'id = "en_cours"';
                   } ?> class="nav-item">
-                <a href="/contact.php" class="nav-link text-info ">Contact</a>
+                <a href="contact.php" class="nav-link text-info ">Contact</a>
               </li>
-            <?php endif; ?>
-            <?php if (isset($_SESSION["user"])) : ?>
+              <li <?php if ($nav_en_cours == 'Reservation') {
+                    echo 'id = "en_cours"';
+                  } ?> class="nav-item">
+                <a href="reservation.php" class="nav-link text-info ">Réserver</a>
+              </li>
 
+            <?php endif; ?>
+
+            <?php if (isset($_SESSION["user"])) : ?>
               <li <?php if ($nav_en_cours == 'profil') {
                     echo 'id = "en_cours"';
                   } ?> class="nav-item">
-                <a href="/profil.php" class="nav-link ">Mon compte</a>
+                <a href="profil.php" class="nav-link ">Mon compte</a>
               </li>
             <?php endif; ?>
 
-
-
-
-
-            <?php if (!isset($_SESSION["user"])) : ?>
+            <?php if (!isset($_SESSION["user"]) && !isset($_SESSION["admin"])) : ?>
 
               <li class="nav-item" <?php if ($nav_en_cours == 'connexion') {
                                       echo 'id = "en_cours"';
@@ -88,6 +79,12 @@
                 <a href="deconnexion.php" class="nav-link text-info">Se deconnecter</a>
               </li>
             <?php endif; ?>
+
+
+
+
+
+
 
           </ul>
         </div>

@@ -41,7 +41,7 @@ USE quai_antique;
   CREATE TABLE galerie(
   id_galerie INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   titre VARCHAR(250) NOT NULL,
-  image VARCHAR(250 NOT NULL,
+  image VARCHAR(250) NOT NULL
   );
   
   CREATE TABLE horaires(
@@ -72,7 +72,7 @@ USE quai_antique;
   type VARCHAR (50) NOT NULL,
   );
   
-  CREATE TABLE table(
+  CREATE TABLE tableRestaurant(
   id_table INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
   nb_convives_max INT NOT NULL,
   reservation_id INT(11),

@@ -28,7 +28,7 @@
           </ul>
         </div>
         <div class="col-lg-3 item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a>
-          <p class="copyright">Quai Antique © 2022</p>
+          <p class="copyright">Quai Antique © 2023</p>
         </div>
       </div>
     </div>

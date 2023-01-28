@@ -7,8 +7,8 @@ $nav_en_cours = 'connexion';
 
 /* CONNEXION */
 
-if (isset($_SESSION["user"])) {
-  header("Location: profil.php");
+if (isset($_SESSION["user"]["admin"])) {
+  header("Location: index.php");
   exit;
 }
 
@@ -52,21 +52,40 @@ if (!empty($_POST)) {
 
       if ($_SESSION["error"] === []) {
         //On stocke dans $_SESSION les informations de l'utilisateur
-        $_SESSION["user"] = [
-          "id" => $user["id"],
-          "email" => $user["email"],
-          "roles" => $user["roles"],
-          "allergie_oeufs" => $user["allergie_oeufs"],
-          "allergie_lait" => $user["allergie_lait"],
-          "allergie_crustaces" => $user["allergie_crustaces"],
-          "allergie_arachides" => $user["allergie_arachides"],
-          "allergie_ble" => $user["allergie_ble"],
-          "nb_convives" => $user["nb_convives"]
-        ];
+
+        $sql = "SELECT roles FROM user";
+        var_dump($sql);
+        $query = $db->prepare($sql);
+        $query->execute();
+
+        $userRoles = $query->fetch();
 
 
-        //On redirige vers la page de profil
-        header("Location: profil.php");
+        if ($userRoles['roles'] === ["ROLE_USER"]) {
+
+          $_SESSION["user"] = [
+            "id" => $user["id"],
+            "email" => $user["email"],
+            "roles" => $user["roles"],
+            "allergie_oeufs" => $user["allergie_oeufs"],
+            "allergie_lait" => $user["allergie_lait"],
+            "allergie_crustaces" => $user["allergie_crustaces"],
+            "allergie_arachides" => $user["allergie_arachides"],
+            "allergie_ble" => $user["allergie_ble"],
+            "nb_convives" => $user["nb_convives"]
+          ];
+          //On redirige vers la page de profil
+          header("Location: profil.php");
+        } else {
+          $_SESSION["admin"] = [
+            "id" => $user["id"],
+            "email" => $user["email"],
+            "roles" => $user["roles"],
+
+          ];
+
+          header("Location: profilAdmin.php");
+        }
       }
     }
   }
@@ -80,18 +99,20 @@ include_once "includes/navbar.php";
 <div class="row justify-content-center">
 
   <h1 class="connexion-title text-center pt-5">Me connecter :</h1>
-  <?php
-  if (isset($_SESSION["error"])) {
-    foreach ($_SESSION["error"] as $message) {
-  ?>
-      <p><?= $message ?></p>
-  <?php
+
+  <div class="text-center">
+    <?php
+    if (isset($_SESSION["error"])) {
+      foreach ($_SESSION["error"] as $message) {
+    ?>
+        <p><?= $message ?></p>
+    <?php
+      }
+      unset($_SESSION["error"]);
     }
-    unset($_SESSION["error"]);
-  }
 
-  ?>
-
+    ?>
+  </div>
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-md-4 col-sm-6">
