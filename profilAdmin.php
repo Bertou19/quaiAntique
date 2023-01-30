@@ -1,10 +1,10 @@
 <?php
-session_id();
+
 session_start();
 
 $nav_en_cours = 'profilAdmin';
 
-$title = "Profil admin";
+$titrePrincipal = "Profil admin";
 //On inclut le header
 include_once "includes/header.php";
 include_once "includes/navbar.php";
@@ -19,12 +19,12 @@ include_once "includes/navbar.php";
     <p class="profil text-center text-danger mt-4">Adresse e-mail: <?= $_SESSION["admin"]["email"] ?></p>
 
     <p class="profil text-center text-danger mt-2">
-      <a href="gestionCarteEtMenus.php" class="profil text-center text-info text-decoration-none mt-4 mb-5">
+      <a href="gestionCarteEtMenus.php" class="nav-link text-info text-decoration-none mt-4 mb-4">
         Gestion de la carte et des menus</a>
-      <a href="gestionGalerie.php" class="nav-link text-info">Gestion de la galerie</a>
-      <a href="gestionHoraires.php" class="nav-link text-info">Gestion des horaires</a>
+      <a href="gestionGalerie.php" class="nav-link text-info mb-4">Gestion de la galerie</a>
+      <a href="gestionHoraires.php" class="nav-link text-info mb-9">Gestion des horaires</a>
     <p class="text-center text-secondary"></p>
-    <img class="img-profil text-center w-25 h-25" src="photos/cuillere.png" alt="cuillere">
+    <img class="img-profil text-center w-25 h-50 position-absolute opacity-25" src="photos/cuillere.png" alt="cuillere">
   </div>
 </div>
 <?php

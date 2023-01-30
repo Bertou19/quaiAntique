@@ -74,8 +74,56 @@ $nav_en_cours = 'Index';
 </section>
 
 <--! GALERIE PHOTO MODIFIABLE -->
+  <?php
+
+  //ON va chercher les images dans la base
+  //On se connecte à la base
+  require "includes/connect.php";
+
+  //On écrit la requête
+  $sql = "SELECT image FROM galerie";
+
+  //On execute la requête
+  $requete = $db->query($sql);
+
+  //On recupère les données
+  $images = $requete->fetchAll();
+  $chemin = "/uploads/" . $images;
+  //$newfilename = __DIR__ . "/uploads/$newname.$extension";
 
 
+  //On écrit le contenu de la page
+
+  ?>
+
+  <h1 class="galerie text-warning text-center pt-5 mb-5">Galerie photo</h1>
+
+  <section class="mb-6">
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-md-8 col-sm-10">
+
+          <?php
+          var_dump($images); ?>
+
+
+          <?php echo '<img src="uploads/' . $images["image"] . '"/>';
+
+          ?>
+
+          <?php echo '<img src="uploads/' . $images[0]["image"] . '"/>';
+
+          ?>
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
 
 
 

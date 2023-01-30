@@ -48,7 +48,7 @@ if (!empty($_POST)) {
 
 
           $sql = "INSERT INTO user (`email`,`password`, `roles`, `allergie_ble`, `allergie_arachides`,`allergie_crustaces`,`allergie_oeufs`, `allergie_lait`, `nb_convives`) VALUES
-(:email, '$password','[\"ROLE_USER\",\"ROLE_ADMIN\"]', 0, 0,0,0,0,0)";
+(:email, '$password','admin', 0, 0,0,0,0,0)";
 
           $query = $db->prepare($sql);
 
@@ -67,7 +67,7 @@ if (!empty($_POST)) {
             $_SESSION["admin"] = [
               "id" => $id,
               "email" => $_POST["email"],
-              "roles" => ["ROLE_USER"]["ROLE_ADMIN"],
+              "roles" => "admin",
 
             ];
 

@@ -7,7 +7,7 @@ $nav_en_cours = 'Politique_de_confidentialité';
 
 
 //ON définit le titre
-$titre = "Politique de confidentialité";
+$titrePrincipal  = "Politique de confidentialité";
 
 //On inclut le header
 include "includes/header.php";

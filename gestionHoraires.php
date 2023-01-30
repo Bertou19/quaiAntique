@@ -1,6 +1,6 @@
 <?php
 
-session_id();
+
 session_start();
 //On definit le titre
 $titrePrincipal = "Gestion des horaires";

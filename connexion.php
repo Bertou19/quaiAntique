@@ -1,5 +1,5 @@
 <?php
-session_id();
+
 session_start();
 
 $nav_en_cours = 'connexion';
@@ -7,7 +7,7 @@ $nav_en_cours = 'connexion';
 
 /* CONNEXION */
 
-if (isset($_SESSION["user"]["admin"])) {
+if (isset($_SESSION["user"])) {
   header("Location: index.php");
   exit;
 }
@@ -40,6 +40,7 @@ if (!empty($_POST)) {
 
       $user = $query->fetch();
 
+
       if (!$user) {
         $_SESSION["error"] = ["L'utilisateur et/ou le mot de passe est incorrect"];
       }
@@ -53,18 +54,19 @@ if (!empty($_POST)) {
       if ($_SESSION["error"] === []) {
         //On stocke dans $_SESSION les informations de l'utilisateur
 
-        $sql = "SELECT roles FROM user";
-        var_dump($sql);
+        /*$sql = "SELECT * FROM user"; //nb : pourquoi refaire une requete car il y a eu dejà en ligne 32 ????              <= nb =>
+
         $query = $db->prepare($sql);
         $query->execute();
 
-        $userRoles = $query->fetch();
+        $userRoles = $query->fetch();*/
+        $userRoles = $user;
 
 
-        if ($userRoles['roles'] === ["ROLE_USER"]) {
+        if ($userRoles["roles"] == "user") {
 
           $_SESSION["user"] = [
-            "id" => $user["id"],
+            "id" => $user["id_user"],
             "email" => $user["email"],
             "roles" => $user["roles"],
             "allergie_oeufs" => $user["allergie_oeufs"],
@@ -74,11 +76,16 @@ if (!empty($_POST)) {
             "allergie_ble" => $user["allergie_ble"],
             "nb_convives" => $user["nb_convives"]
           ];
+
+
           //On redirige vers la page de profil
           header("Location: profil.php");
-        } else {
+        }
+        if ($userRoles["roles"] == "admin") {
+
+
           $_SESSION["admin"] = [
-            "id" => $user["id"],
+            "id" => $user["id_user"],
             "email" => $user["email"],
             "roles" => $user["roles"],
 

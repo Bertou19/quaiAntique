@@ -1,6 +1,6 @@
 <?php
 
-session_id();
+
 session_start();
 //On definit le titre
 $titrePrincipal = "Gestion de la galerie";
@@ -48,7 +48,7 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
 
   require_once "includes/connect.php";
 
-  $sql = "INSERT INTO galerie(`image`) VALUES ('$newfilename')";
+  $sql = "INSERT INTO galerie(`image`) VALUES ('$newname.$extension')";
 
   $query = $db->prepare($sql);
   $query->execute();

@@ -7,7 +7,7 @@ $nav_en_cours = 'Mentions_legales';
 
 
 //ON définit le titre
-$titre = "Mentions légales";
+$titrePrincipal  = "Mentions légales";
 
 //On inclut le header
 include "includes/header.php";
