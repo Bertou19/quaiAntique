@@ -54,12 +54,7 @@ if (!empty($_POST)) {
       if ($_SESSION["error"] === []) {
         //On stocke dans $_SESSION les informations de l'utilisateur
 
-        /*$sql = "SELECT * FROM user"; //nb : pourquoi refaire une requete car il y a eu dejà en ligne 32 ????              <= nb =>
-
-        $query = $db->prepare($sql);
-        $query->execute();
-
-        $userRoles = $query->fetch();*/
+        
         $userRoles = $user;
 
 
