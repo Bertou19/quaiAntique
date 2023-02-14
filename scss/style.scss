@@ -76,6 +76,17 @@ color:#5F5449;
   font-size: 1rem;
 }
 
+.offcanvas-body{
+  font-family: "headlandOne";
+}
+
+.chef-offcanvas{
+  width: 400px;
+  height:300px;
+ margin-left:1px;
+margin-top:1px;
+}
+
 /*INDEX*/
 
 .background{
@@ -106,7 +117,7 @@ color:#5F5449;
  
 }
 
-.title-section, .titleListPatients{
+.title-section{
   font-family:"Lora-SemiBoldItalic" ;
 color:#9B6A6C; 
 ;
@@ -263,12 +274,16 @@ h1,p{
   font-family: "";
 }
 
-
-
-
-
-
-
+ .title-form, .title-reservation,.title-carte{
+  font-family:"Lora-SemiBoldItalic" ;
+  font-size: 3rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  text-align:center;
+  border-radius: 2px;
+   
+  color:#9B6A6C; 
+}
 
 /*CONNEXION*/
 
