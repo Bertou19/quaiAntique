@@ -16,7 +16,7 @@ include_once "includes/navbar.php";
   <div class="row justify-content-center">
 
     <h1 class="profil-title text-center mt-6 text-danger ">Mon compte</h1>
-    <p class="profil text-center text-danger mt-4">Adresse e-mail: <?= $_SESSION["user"]["email"] ?></p>
+    <p class="profil text-center text-danger mt-6">Adresse e-mail: <?= $_SESSION["user"]["email"] ?></p>
     <p class="profil text-center text-danger mt-2">Nombre de convives (par defaut): <?= $_SESSION["user"]["nb_convives"] ?></p>
     <p class="profil text-center text-danger mt-2">Allergies: <?php if ($_SESSION["user"]["allergie_oeufs"] == 1) {
                                                                 echo "Oeufs";
@@ -34,7 +34,7 @@ include_once "includes/navbar.php";
                                                                 echo "Lait";
                                                               }
                                                               ?></p>
-    <a href="reservation.php#reservee" class="profil text-center text-info text-decoration-none mt-4 mb-9">
+    <a href="reservation.php#reservee" class="profil text-center text-info text-decoration-none mt-7 mb-6">
       Reserver une table ? </a>
     <p class="text-center text-secondary"></p>
     <img class="img-profil text-center w-25 h-50 position-absolute opacity-25" src="photos/cuillere.png" alt="cuillere">

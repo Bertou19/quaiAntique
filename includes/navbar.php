@@ -3,7 +3,9 @@
   <nav class="navbar navbar-expand-lg bg-success p-5">
     <div class="container-fluid">
       <a href="index.php" class="navbar-brand p-0 me-0">
+
         <h2 class="navbarTitle">Quai Antique</h2>
+
       </a>
 
 

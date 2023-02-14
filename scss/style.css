@@ -35,7 +35,7 @@ body {
 /*NAVBAR*/
 .navbarTitle {
   font-family: "Gwendolyn-Regular";
-  font-size: 3rem;
+  font-size: 4rem;
   color: #5F5449;
   padding-left: 1rem;
 }
@@ -69,20 +69,24 @@ body {
 .background {
   width: 25%;
   height: 600px;
+  box-shadow: 10px 10px 10px rgb(155, 155, 155);
 }
 
+@media (max-width: 767px) {
+  .background {
+    margin: 0 auto;
+  }
+}
 .home {
   top: 400px;
   width: 100%;
-  position: absolute;
   display: block;
 }
 
 .h1-index, .h1-index2 {
   font-family: "Lora-SemiBoldItalic";
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
-  text-align: center;
   border-radius: 2px;
   color: #9B6A6C;
 }
@@ -106,18 +110,43 @@ body {
   border-radius: 50%;
 }
 
-.imgIndex {
-  width: 800px;
+.imgGalerie {
+  width: 600px;
   height: 400px;
   box-shadow: 10px 10px 10px rgb(155, 155, 155);
 }
 
+.images {
+  display: block;
+}
+
+.imgIndex {
+  width: 900px;
+  height: 500px;
+  box-shadow: 10px 10px 10px rgb(155, 155, 155);
+}
+
 @media (max-width: 767px) {
-  .imgIndex {
+  .imgIndex, .imgGalerie {
     width: 400px;
     height: 200px;
   }
 }
+.text-img-resto {
+  font-family: "Gwendolyn-Bold";
+  font-size: 40px;
+}
+
+@media (max-width: 767px) {
+  .text-img-resto, .h1-index {
+    font-size: 30px;
+  }
+}
+.text-galerie {
+  font-family: "Lora-SemiBoldItalic";
+  font-size: 50px;
+}
+
 /*INSCRIPTION*/
 .parenthese {
   font-family: "Lora-SemiBoldItalic";
@@ -133,16 +162,6 @@ body {
 .profil {
   font-family: "headlandOne";
   font-size: 20px;
-}
-
-.profil-title:before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("/Users/Bertille/Documents/CoursHTML-STUDI/EVALUATIONS/ECF finale/photos/cuillere.png");
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: -5px;
 }
 
 /*CONTACT*/
@@ -209,16 +228,6 @@ body {
 .connexion-title, .inscription-title {
   font-family: "Lora-SemiBoldItalic";
   color: #9B6A6C;
-}
-
-.connexion-title::before, .connexion-title::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("../photos/carrottes.png");
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: -5px;
 }
 
 /* Mentions légales, politique de confidentialité */

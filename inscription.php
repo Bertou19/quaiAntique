@@ -50,8 +50,6 @@ if (!empty($_POST)) {
           $allergie_ble = ($_POST["allergie_ble"]);
           $nb_convives = ($_POST["nb_convives"]);
 
-
-
           //On enregistre en bdd
           require_once "includes/connect.php";
 
