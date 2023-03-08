@@ -5,7 +5,7 @@ session_start();
 //On definit le titre
 $titrePrincipal = "Gestion des horaires";
 
-$nav_en_cours = 'gestionHoraires';
+$nav_en_cours = 'profilAdmin';
 //On vérifie si le formulaire a été envoyé
 if (!empty($_POST)) {
   //Le formulaire a été envoyé
@@ -170,7 +170,7 @@ include_once "includes/navbar.php";
         </div>
 
         <div class="text-center pt-5">
-          <button type="submit" class="button btn btn-danger text-light mb-7" value="ajouter">Ajouter un horaire</button>
+          <button type="submit" class="button btn btn-lg btn-danger text-light mb-5" value="ajouter">Modifier un horaire</button>
         </div>
       </form>
     </div>

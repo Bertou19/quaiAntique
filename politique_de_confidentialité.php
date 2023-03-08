@@ -4,8 +4,6 @@ session_start();
 
 $nav_en_cours = 'Politique_de_confidentialité';
 
-
-
 //ON définit le titre
 $titrePrincipal  = "Politique de confidentialité";
 
@@ -23,8 +21,6 @@ include "includes/navbar.php";
 
 <div class="container-fluid">
   <div class="row justify-content-center">
-
-
     <section class="col-6 text-center p-2 mb-3">
       <p> Lorem ipsum dolor sit amet. Et quia nemo id sequi animi aut obcaecati iure et doloremque doloribus sit ipsa accusamus. Ab dolorem dolore et repellendus dolor et labore minima.
         Cum architecto error ab autem voluptatem qui consequatur accusantium ut quia autem qui officia commodi qui deserunt voluptatibus.

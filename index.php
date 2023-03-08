@@ -19,15 +19,25 @@ $nav_en_cours = 'Index';
 <section>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-10 ">
-        <img class="background ms-lg-9 ms-md-5 w-50 h-100 img-responsive" src="./photos/table.jpg" alt="table de restaurant">
+      <div class=" col-12">
+        <img class="background" src="./photos/dessertChocolat.jpg" alt="dessert">
       </div>
       <div class="home">
-        <h1 class="h1-index me-8 text-lg-end text-md-center text-info">Et iusto odio dignissimos ducimus.</h1>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-12 text-center">
+              <h1 class="h1-index me-8 text-lg-end text-md-center text-sm-center text-info">Et iusto odio dignissimos ducimus.</h1>
+              <div class="col-md-6">
+                <button type="button" class="btn-index btn btn-lg btn-danger ms-md-4 ms-lg-4 ms-sm-5 p-3 mb-3 shadow-lg"><a href="reservation.php" class="btn-contact">Reserver une table</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
 <section>
   <div class="container">
     <div class="row justify-content-center">
@@ -66,7 +76,6 @@ $nav_en_cours = 'Index';
           </button>
         </div>
       </div>
-
       <div class="col-sm-4 col-md-5 item">
         <h2 class="title-section p-4 border-top border-start border-danger mt-6" id="A_propos">Le mot du chef...</h2>
         <p class="text-info ps-4">At vero eos et accusamus et iusto odio dignissimos ducimus</p>
@@ -80,7 +89,7 @@ $nav_en_cours = 'Index';
 
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-sm-4 col-md-6 mt-5 ">
+    <div class="col-sm-4 col-md-6 mt-4 ">
       <p class="text-galerie text-danger ps-4 mb-5">Des mets raffinés...</p>
     </div>
   </div>
@@ -93,7 +102,7 @@ $nav_en_cours = 'Index';
 require "includes/connect.php";
 
 //On écrit la requête
-$sql = "SELECT image FROM galerie";
+$sql = "SELECT * FROM galerie";
 
 //On execute la requête
 $requete = $db->query($sql);
@@ -110,23 +119,34 @@ $chemin = "/uploads/" . $images;
 
 <section>
   <div class="container-fluid">
-    <div class="row justify-content-center">
-      <div class="col-md-11 col-sm-4 item images">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 images">
         <?php foreach ($images as $image) : ?>
-
+          <?= '<div id="title-hover">' ?>
           <?= '<div class="col item images">'; ?>
-          <?= '<img class="imgGalerie mt-4 border border-info" src="uploads/' . $image["image"] . ' " alt="$image["titre"]" />'; ?>
+
+          <?= '<img class="imgGalerie mt-4 border border-info" src="uploads/' . $image["image"] . '" title="' . $image["titre"] . '"/>' ?>
           <?= '</div>'; ?>
+          <?= '</div>' ?>
         <?php endforeach; ?>
       </div>
     </div>
   </div>
 </section>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="">
+        <img class="etoiles ms-4 mb-12" src="./photos/etoilesJaunes.png" alt="etoiles">
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-10 text-center">
-      <button type="button" class="btn btn-danger ms-md-4 ms-lg-4 ms-sm-5 p-3 mb-3"><a href="reservation.php" class="btn-contact">Reserver une table</a></button>
+      <button type="button" class="btn btn-lg btn-danger ms-md-4 ms-lg-4 ms-sm-5 p-3 mb-3"><a href="reservation.php" class="btn-contact">Reserver une table</a></button>
     </div>
   </div>
 </div>
@@ -141,7 +161,7 @@ $chemin = "/uploads/" . $images;
     <div class="row justify-content-center">
       <div class="col-md-11 col-sm-4 text-center">
         <p class="text-img-resto ps-4 mb-5 mt-6 text-info">Est eaque nemo et molestiae ullam qui quia similique. Vel maxime omnis aut earum.</p>
-        <img class="imgIndex  mb-6 ms-md-10 ms-sm-3 border border-info" src="photos/restaurantvue.jpg" alt="restaurant">
+        <img class="imgIndex  mb-6 ms-lg-10 border border-info" src="photos/restaurantvue.jpg" alt="restaurant">
       </div>
     </div>
   </div>

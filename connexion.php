@@ -29,7 +29,7 @@ if (!empty($_POST)) {
       //On va se connecter à la base de données
       require "includes/connect.php";
 
-      $sql = "SELECT * FROM user WHERE `email` = :email";
+      $sql = "SELECT * FROM `user` WHERE `email` = :email";
 
 
       $query = $db->prepare($sql);
@@ -39,7 +39,7 @@ if (!empty($_POST)) {
       $query->execute();
 
       $user = $query->fetch();
-
+      var_dump($user);
 
       if (!$user) {
         $_SESSION["error"] = ["L'utilisateur et/ou le mot de passe est incorrect"];
@@ -54,10 +54,7 @@ if (!empty($_POST)) {
       if ($_SESSION["error"] === []) {
         //On stocke dans $_SESSION les informations de l'utilisateur
 
-<<<<<<< HEAD
-=======
-        
->>>>>>> quaiAntique/main
+
         $userRoles = $user;
 
 
@@ -65,14 +62,20 @@ if (!empty($_POST)) {
 
           $_SESSION["user"] = [
             "id" => $user["id_user"],
+            "nom" => $user["nom"],
             "email" => $user["email"],
+            "telephone" => $user["telephone"],
             "roles" => $user["roles"],
             "allergie_oeufs" => $user["allergie_oeufs"],
             "allergie_lait" => $user["allergie_lait"],
             "allergie_crustaces" => $user["allergie_crustaces"],
             "allergie_arachides" => $user["allergie_arachides"],
             "allergie_ble" => $user["allergie_ble"],
-            "nb_convives" => $user["nb_convives"]
+            "nb_convives" => $user["nb_convives"],
+            "id_reservation" => $user["id_reservation"],
+            "date" => $user["date"],
+            "nb_convives" => $user["nb_convives"],
+            "heure" => $user["heure"]
           ];
 
 
@@ -120,19 +123,19 @@ include_once "includes/navbar.php";
   </div>
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-md-4 col-sm-6">
+      <div class="col-md-4 col-sm-4 ">
         <form class="" method="post">
-          <div class="pt-2">
+          <div class="pt-2 m-3">
             <label for="exampleInputEmail1" class="form-label"></label>
             <input type="text" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
           </div>
-          <div class="w-50 w-2 pt-2">
+          <div class="w-50 w-2 pt-2 m-3">
             <label for="exampleInputPassword1" class="form-label"></label>
             <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
           </div>
           <div class="text-center pt-5">
-            <button type="submit" class="button btn btn-danger text-light mb-7">Connexion</button>
-            <a href="inscription.php"><button type="button" class="button btn btn-danger text-light mb-7">M'inscrire</button></a>
+            <button type="submit" class="button btn btn-lg btn-danger text-light mb-7">Connexion</button>
+            <a href="inscription.php"><button type="button" class="button btn btn-lg btn-danger text-light mb-7">M'inscrire</button></a>
           </div>
         </form>
       </div>
@@ -140,5 +143,5 @@ include_once "includes/navbar.php";
   </div>
 </div>
 <?php
-include_once "includes/footer.php";
+@include_once "includes/footer.php";
 ?>

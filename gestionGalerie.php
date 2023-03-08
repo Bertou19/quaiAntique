@@ -5,7 +5,7 @@ session_start();
 //On definit le titre
 $titrePrincipal = "Gestion de la galerie";
 
-$nav_en_cours = 'galerie';
+$nav_en_cours = 'profilAdmin';
 
 //On vérifie si un fichier a été envoyé
 if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
@@ -47,9 +47,9 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
 
   if (isset($_POST["titre"]) && !empty($_POST["titre"])) {
 
-    if (strlen($_POST["titre"]) > 30) {
+    if (strlen($_POST["titre"]) > 40) {
       $_SESSION["error"] = [];
-      $_SESSION["error"] = ["Veuillez entrer un titre de moins de 30 caractères"];
+      $_SESSION["error"] = ["Veuillez entrer un titre de moins de 40 caractères"];
     } else {
       $titre = ($_POST["titre"]);
 
@@ -58,7 +58,7 @@ if (isset($_FILES["image"]) && $_FILES["image"]["error"] === 0) {
       $sql = "INSERT INTO galerie(`image`,`nom`,`chemin`,`titre`) VALUES ('$newname.$extension','$filename','$newfilename','$titre')";
 
       $query = $db->prepare($sql);
-      //$query->bindValue(":titre", $titre, PDO::PARAM_STR);
+
       $query->execute();
     }
   }
@@ -134,7 +134,7 @@ $images = $requete->fetchAll();
 
             </div>
             <div class="text-center">
-              <button type="submit" class="btn btn-info mt-3">Envoyer</button>
+              <button type="submit" class="btn btn-lg btn-info mt-3">Enregistrer</button>
             </div>
           </div>
         </div>
@@ -155,8 +155,8 @@ $images = $requete->fetchAll();
               <th></th>
               <th scope="col p-2" class="text-danger text-center ">Id</th>
               <th scope="col p-2" class="text-danger text-center">Nom</th>
-              <th scope="col p-2" class="text-danger text-center">Aperçu</th>
               <th scope="col p-2" class="text-danger text-center">Titre</th>
+              <th scope="col p-2" class="text-danger text-center">Aperçu</th>
               <th scope="col p-2" class="text-danger text-center"></th>
             </tr>
           </thead>

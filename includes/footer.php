@@ -7,7 +7,7 @@
           <ul>
             <li><a href="politique_de_confidentialité.php">Politique de confidentialité</a></li>
             <li><a href="mentions_legales.php">Mentions légales</a></li>
-            <li><a href="index.php#A_propos">Histoire du restaurant</a></li>
+            <li><a href="histoire.php">Histoire du restaurant</a></li>
           </ul>
         </div>
         <div class="col-sm-4 col-md-3 item">
@@ -36,7 +36,7 @@
 
 
         <div class="col-sm-4 col-md-3 item">
-          <h3>Horaires de service</h3>
+          <h3>Horaires d'ouverture</h3>
 
           <table class="table text-success">
             <thead>
@@ -77,9 +77,9 @@
   </footer>
 </div>
 
-<script src="../js/jquery.js"></script>
-<script src="../js/bootstrap.js"></script>
-<script src="../js/script.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/script.js"></script>
 <script src="https://kit.fontawesome.com/b4a9f9c0a2.js" crossorigin="anonymous"></script>
 
 </body>

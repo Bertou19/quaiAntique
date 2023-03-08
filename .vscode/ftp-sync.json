@@ -20,7 +20,7 @@
     ],
     "generatedFiles": {
         "extensionsToInclude": [
-            ".php, .html, .js, .css"
+            ".php, .html, .js"
         ],
         "path": ""
     }
