@@ -54,7 +54,11 @@ if (!empty($_POST)) {
       if ($_SESSION["error"] === []) {
         //On stocke dans $_SESSION les informations de l'utilisateur
 
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> main
         $userRoles = $user;
 
 
@@ -143,5 +147,10 @@ include_once "includes/navbar.php";
   </div>
 </div>
 <?php
+<<<<<<< HEAD
 @include_once "includes/footer.php";
 ?>
+=======
+include_once "includes/footer.php";
+?>
+>>>>>>> main
