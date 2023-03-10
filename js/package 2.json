@@ -1,0 +1,19 @@
+{
+  "name": "quai_antique",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "sass": "sass --watch ../scss/bootstrap.scss:../css/bootstrap.css",
+   "scss": "scss --watch ../scss/style.scss:../scss/style.css"
+  
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.1"
+  },
+"phpmailer":{"phpmailer/phpmailer": "^6.5"
+
+}
+}

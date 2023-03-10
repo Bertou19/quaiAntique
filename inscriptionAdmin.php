@@ -46,8 +46,8 @@ if (!empty($_POST)) {
           //On enregistre en bdd
           require_once "includes/connect.php";
 
-
-          $sql = "INSERT INTO user (`email`,`password`, `roles`, `allergie_ble`, `allergie_arachides`,`allergie_crustaces`,`allergie_oeufs`, `allergie_lait`, `nb_convives`) VALUES
+          $sql = "INSERT INTO user (`email`,`password`, `roles`, `allergie_ble`, `allergie_arachides`,
+          `allergie_crustaces`,`allergie_oeufs`, `allergie_lait`, `nb_convives`) VALUES
 (:email, '$password','admin', 0, 0,0,0,0,0)";
 
           $query = $db->prepare($sql);
@@ -128,15 +128,13 @@ include_once "includes/navbar.php";
           <label for="exampleInputPassword1" class="form-label"></label>
           <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Mot de passe">
         </div>
-
         <div class="text-center pt-5">
-          <button type="submit" class="button btn btn-danger text-light mb-7">Inscription</button>
+          <button type="submit" class="button btn btn-lg btn-danger text-light mb-7">Inscription</button>
         </div>
       </form>
     </div>
   </div>
 </div>
-
 
 <?php
 // On inclut le footer

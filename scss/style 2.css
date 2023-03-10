@@ -1,0 +1,315 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "headlandOne";
+  src: url("../fonts/HeadlandOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Lora-SemiBoldItalic";
+  src: url("../fonts/Lora-SemiBoldItalic.ttf");
+}
+@font-face {
+  font-family: "Lora-SemiBold";
+  src: url("../fonts/Lora-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Lora-Regular";
+  src: url("../fonts/Lora-Regular.ttf");
+}
+@font-face {
+  font-family: "Gwendolyn-Regular";
+  src: url("../fonts/Gwendolyn-Regular.ttf");
+}
+@font-face {
+  font-family: "Gwendolyn-Bold";
+  src: url("../fonts/Gwendolyn-Bold.ttf");
+}
+@font-face {
+  font-family: "Lora-Italic";
+  src: url("../fonts/Lora-Italic.ttf");
+}
+body {
+  min-height: 100vh;
+  background-color: #CEDFD9;
+}
+
+/*NAVBAR*/
+.navbarTitle {
+  font-family: "Gwendolyn-Regular";
+  font-size: 3rem;
+  color: #5F5449;
+  padding-left: 1rem;
+}
+
+@media (max-width: 767px) {
+  .navbarTitle {
+    font-size: 1.5rem;
+    padding-left: 0;
+  }
+  .h1-index, .h1-index2 {
+    font-size: 10px;
+  }
+}
+#en_cours {
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.offcanvas-title {
+  color: #5F5449;
+  font-family: "Gwendolyn-Regular";
+  font-size: 2rem;
+}
+
+.offcanvasSecondTitle {
+  font-family: "headlandOne";
+  font-size: 1rem;
+}
+
+/*INDEX*/
+.background {
+  width: 25%;
+  height: 600px;
+}
+
+.home {
+  top: 400px;
+  width: 100%;
+  position: absolute;
+  display: block;
+}
+
+.h1-index, .h1-index2 {
+  font-family: "Lora-SemiBoldItalic";
+  font-size: 3rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 2px;
+  color: #9B6A6C;
+}
+
+.title-section, .titleListPatients {
+  font-family: "Lora-SemiBoldItalic";
+  color: #9B6A6C;
+}
+
+.btn-contact {
+  text-decoration: none;
+  color: #EBFCFB;
+  font-family: "Lora-SemiBoldItalic";
+}
+
+.btn-contact:hover {
+  color: #CEDFD9;
+}
+
+.photo-profil {
+  border-radius: 50%;
+}
+
+.imgIndex {
+  width: 800px;
+  height: 400px;
+  box-shadow: 10px 10px 10px rgb(155, 155, 155);
+}
+
+@media (max-width: 767px) {
+  .imgIndex {
+    width: 400px;
+    height: 200px;
+  }
+}
+/*INSCRIPTION*/
+.parenthese {
+  font-family: "Lora-SemiBoldItalic";
+  font-size: 15px;
+}
+
+/*PROFIL*/
+.profil-title {
+  font-family: "Lora-SemiBoldItalic";
+  font-size: 30px;
+}
+
+.profil {
+  font-family: "headlandOne";
+  font-size: 20px;
+}
+
+.profil-title:before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("/Users/Bertille/Documents/CoursHTML-STUDI/EVALUATIONS/ECF finale/photos/cuillere.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: -5px;
+}
+
+/*CONTACT*/
+.form {
+  width: 500px;
+  margin: auto;
+  padding: 10px;
+}
+
+.button, .form-label {
+  font-family: "";
+}
+
+.border {
+  margin-left: 500px;
+  margin-right: 500px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 767px) {
+  .border {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  h1, p {
+    text-align: center;
+  }
+  .form {
+    width: 350px;
+  }
+}
+@media (max-width: 995px) {
+  .border {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  h1, p {
+    text-align: center;
+  }
+  .form {
+    width: 350px;
+  }
+}
+@media (max-width: 1500px) {
+  .border {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+  h1, p {
+    text-align: center;
+  }
+  .form {
+    width: 350px;
+  }
+}
+.adresse-title {
+  font-family: "";
+}
+
+/*CONNEXION*/
+.connexion-title, .inscription-title {
+  font-family: "Lora-SemiBoldItalic";
+  color: #9B6A6C;
+}
+
+.connexion-title::before, .connexion-title::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-image: url("../photos/carrottes.png");
+  background-repeat: no-repeat;
+  display: inline-block;
+  vertical-align: -5px;
+}
+
+/* Mentions légales, politique de confidentialité */
+.confidential-title, .mentions-title {
+  font-family: "Lora-SemiBoldItalic";
+  color: #9B6A6C;
+}
+
+p {
+  font-family: "headlandOne";
+}
+
+/*FOOTER*/
+.footer-clean {
+  padding: 50px 0;
+  background-color: #5F5449;
+  color: #CEDFD9;
+}
+
+.footer-clean h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.footer-clean ul {
+  padding: 0;
+  list-style: none;
+  line-height: 1.6;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.footer-clean ul a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity: 1;
+}
+
+.footer-clean .item.social {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  .footer-clean .item {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .footer-clean .item.social {
+    text-align: center;
+  }
+}
+.footer-clean .item.social > a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  margin-top: 22px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.footer-clean .item.social > a:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 991px) {
+  .footer-clean .item.social > a {
+    margin-top: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .footer-clean .item.social > a {
+    margin-top: 10px;
+  }
+}
+.footer-clean .copyright {
+  margin-top: 14px;
+  margin-bottom: 0;
+  font-size: 13px;
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */

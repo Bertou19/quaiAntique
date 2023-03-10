@@ -29,20 +29,19 @@
 }
 body {
   min-height: 100vh;
-  background-color: #CEDFD9;
 }
 
 /*NAVBAR*/
 .navbarTitle {
   font-family: "Gwendolyn-Regular";
-  font-size: 3rem;
+  font-size: 4rem;
   color: #5F5449;
   padding-left: 1rem;
 }
 
 @media (max-width: 767px) {
   .navbarTitle {
-    font-size: 1.5rem;
+    font-size: 4rem;
     padding-left: 0;
   }
   .h1-index, .h1-index2 {
@@ -57,7 +56,7 @@ body {
 .offcanvas-title {
   color: #5F5449;
   font-family: "Gwendolyn-Regular";
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 .offcanvasSecondTitle {
@@ -65,10 +64,39 @@ body {
   font-size: 1rem;
 }
 
+.offcanvas-body {
+  font-family: "headlandOne";
+}
+
+.chef-offcanvas {
+  width: 400px;
+  height: 350px;
+  margin-left: 0.8em;
+  margin-top: 2px;
+}
+
 /*INDEX*/
+.etoiles {
+  position: absolute;
+  -o-object-position: 100%;
+     object-position: 100%;
+  width: 700px;
+  height: 900px;
+}
+
+@media (max-width: 767px) {
+  .etoiles {
+    display: none;
+  }
+}
 .background {
-  width: 25%;
+  width: 100%;
   height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  box-shadow: 10px 10px 10px rgb(155, 155, 155);
 }
 
 .home {
@@ -76,18 +104,19 @@ body {
   width: 100%;
   position: absolute;
   display: block;
+  margin: auto;
 }
 
 .h1-index, .h1-index2 {
   font-family: "Lora-SemiBoldItalic";
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 500;
-  text-align: center;
+  text-shadow: #a68484 6px 6px;
   border-radius: 2px;
   color: #9B6A6C;
 }
 
-.title-section, .titleListPatients {
+.title-section {
   font-family: "Lora-SemiBoldItalic";
   color: #9B6A6C;
 }
@@ -106,18 +135,132 @@ body {
   border-radius: 50%;
 }
 
+.imgGalerie {
+  width: 1000px;
+  height: 700px;
+  box-shadow: 10px 10px 10px rgb(155, 155, 155);
+}
+
+.images {
+  display: block;
+}
+
 .imgIndex {
-  width: 800px;
-  height: 400px;
+  width: 900px;
+  height: 500px;
   box-shadow: 10px 10px 10px rgb(155, 155, 155);
 }
 
 @media (max-width: 767px) {
-  .imgIndex {
+  .imgIndex, .imgGalerie {
     width: 400px;
     height: 200px;
   }
+  .h1-index, .btn-index {
+    display: none;
+  }
 }
+.text-img-resto {
+  font-family: "Gwendolyn-Bold";
+  font-size: 40px;
+}
+
+@media (max-width: 767px) {
+  .text-img-resto, .h1-index {
+    font-size: 30px;
+  }
+}
+.text-galerie {
+  font-family: "Lora-SemiBoldItalic";
+  font-size: 50px;
+}
+
+.title-hover:hover img {
+  left: 2em;
+}
+
+/*CARTE*/
+.title-carte {
+  font-family: "Lora-SemiBoldItalic";
+  font-size: 3rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  text-align: center;
+  border-radius: 2px;
+  position: absolute;
+  color: #9B6A6C;
+}
+
+.bgCarte {
+  top: 200px;
+  border-radius: 50px;
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  display: block;
+  border: dashed rgb(231, 134, 54);
+  background-color: #FFECD1;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .bgCarte {
+    position: unset;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    width: 100%;
+  }
+  .imgBackgroundCarte {
+    width: 0;
+    height: 0;
+  }
+  .carte {
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 995px) {
+  .bgCarte {
+    position: unset;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    width: 100%;
+  }
+  .imgBackgroundCarte {
+    width: 0;
+    height: 0;
+  }
+}
+/*HISTOIRE*/
+.img-histoire {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  box-shadow: 10px 10px 10px rgb(155, 155, 155);
+}
+
+@media (max-width: 767px) {
+  .img-histoire {
+    height: 300px;
+    width: 50%;
+  }
+}
+/*RESERVATION*/
+.img-reservation {
+  width: 50%;
+  height: 600px;
+  -o-object-position: center;
+     object-position: center;
+  box-shadow: 10px 10px 10px rgb(155, 155, 155);
+}
+
+.hidden {
+  display: none;
+}
+
 /*INSCRIPTION*/
 .parenthese {
   font-family: "Lora-SemiBoldItalic";
@@ -125,26 +268,17 @@ body {
 }
 
 /*PROFIL*/
-.profil-title {
-  font-family: "Lora-SemiBoldItalic";
-  font-size: 30px;
-}
-
 .profil {
   font-family: "headlandOne";
   font-size: 20px;
 }
 
-.profil-title:before {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("/Users/Bertille/Documents/CoursHTML-STUDI/EVALUATIONS/ECF finale/photos/cuillere.png");
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: -5px;
+@media (max-width: 767px) {
+  .img-profil {
+    width: 20px;
+    height: 40px;
+  }
 }
-
 /*CONTACT*/
 .form {
   width: 500px;
@@ -205,20 +339,29 @@ body {
   font-family: "";
 }
 
+.title-form, .title-reservation, .profil-title {
+  font-family: "Lora-SemiBoldItalic";
+  font-size: 3rem;
+  font-weight: 500;
+  padding-bottom: 2rem;
+  text-align: center;
+  border-radius: 2px;
+  color: #9B6A6C;
+}
+
+@media (max-width: 767px) {
+  .title-form {
+    font-size: 2rem;
+  }
+}
+.form-label {
+  font-size: 1em;
+}
+
 /*CONNEXION*/
 .connexion-title, .inscription-title {
   font-family: "Lora-SemiBoldItalic";
   color: #9B6A6C;
-}
-
-.connexion-title::before, .connexion-title::after {
-  content: "";
-  width: 50px;
-  height: 50px;
-  background-image: url("../photos/carrottes.png");
-  background-repeat: no-repeat;
-  display: inline-block;
-  vertical-align: -5px;
 }
 
 /* Mentions légales, politique de confidentialité */
