@@ -95,7 +95,7 @@ if (!empty($_POST)) {
 
             // On transforme le nombre récupéré dans la bdd en int pour pouvoir le calculer
             $nb_convives_of_date = intval($nb_convives_of_date);
-            var_dump($nb_convives_of_date);
+            
 
             //On additionne le nombre de convives en bdd et le nombre de convives entré dans le formulaire
             $nb_convives_of_date = $nb_convives_of_date + $nb_convives;
