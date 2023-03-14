@@ -17,7 +17,7 @@ document.getElementById('dateDuJour').valueAsDate = aujourdhui;
  //Pour cacher le champ heure non séléctionné dans le formulaire de réservation
  
  function handleChange(event){
-  console.log("coucou");
+  
   document.querySelectorAll('.block').forEach((form)=>{
     form.classList.toggle('hidden');
     
