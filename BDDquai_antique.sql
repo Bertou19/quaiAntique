@@ -4,12 +4,12 @@ OUVRIR LE SERVEUR
 CREER LA BASE :
 */
 
-CREATE DATABASE quai_antique;
+/*CREATE DATABASE quai_antique;
 
 ALTER DATABASE quai_antique CHARSET=utf8; 
 
 SHOW DATABASES;               
-USE quai_antique;
+USE quai_antique;*/
 
 /*Creer les tables*/
 
@@ -29,8 +29,7 @@ USE quai_antique;
   roles VARCHAR(50) NOT NULL,
   horaires_id INT(11),
   FOREIGN KEY(horaires_id) REFERENCES horaires(id)
-  galerie_id INT(11),
-  FOREIGN KEY(galerie_id) REFERENCES galerie(id)
+  
   );
   
   CREATE TABLE galerie(
