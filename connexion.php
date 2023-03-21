@@ -39,7 +39,7 @@ if (!empty($_POST)) {
       $query->execute();
 
       $user = $query->fetch();
-      var_dump($user);
+    
 
       if (!$user) {
         $_SESSION["error"] = ["L'utilisateur et/ou le mot de passe est incorrect"];
