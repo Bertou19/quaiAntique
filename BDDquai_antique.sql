@@ -20,7 +20,7 @@ USE quai_antique;
   email VARCHAR(50)NOT NULL,
   telephone VARCHAR(10) NOT NULL,
   password VARCHAR(255) NOT NULL,
-  allergie_blé INT,
+  allergie_ble INT,
   allergie_arachides INT,
   allergie_oeufs INT,
   allergie_lait INT,
@@ -65,13 +65,13 @@ USE quai_antique;
   heure_midi VARCHAR(250),
   heure_soir VARCHAR(250),
   nb_convives INT NOT NULL,
-   allergie_blé INT,
+  allergie_ble INT,
   allergie_arachides INT,
   allergie_crustaces INT,
   allergie_oeufs INT,
   allergie_lait INT,
   user_id INT(11),
-  FOREIGN KEY(user_id) REFERENCES user(id)
+  FOREIGN KEY(user_id) REFERENCES user(id_user)
   );
   
  CREATE TABLE carte(
@@ -80,20 +80,7 @@ USE quai_antique;
   nom_fichier VARCHAR(250) NOT NULL
  );
   
-  /*RESTREINDRE LES AUTORISATIONS */
-
-/*creation des autorisations pour un utilisateur en lecture*/
-CREATE USER 'readUser'@'localhost' IDENTIFIED BY 'P@ssw0rd';
-GRANT SELECT ON quai_antique.reservation TO 'readUser'@'localhost';
-
-/*creation des autorisations pour les utilisateurs qui reservent une table*/
-CREATE USER 'user'@'localhost' IDENTIFIED BY 'P@ssw0rd';
-GRANT INSERT ON quai_antique.reservation TO 'user'@'localhost'; 
-
-/*creation des autorisations pour un administrateur qui a vue sur tout*/
-CREATE USER 'admin'@'localhost' IDENTIFIED BY 'P@ssw0rd';
-GRANT ALL ON quai_antique.* TO 'admin'@'localhost';
-
+ 
 
 
 
