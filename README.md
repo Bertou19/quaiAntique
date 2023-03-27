@@ -1,5 +1,5 @@
 # quaiAntique
-Restaurant
+Restaurant gastronomique.
 
 Un manuel d'utilisation du site et de ses fonctionnalités se trouve dans le dossier "documentation technique".
 
